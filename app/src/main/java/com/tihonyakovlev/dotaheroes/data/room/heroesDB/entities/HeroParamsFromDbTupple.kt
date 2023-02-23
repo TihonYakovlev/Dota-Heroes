@@ -1,14 +1,7 @@
-package com.tihonyakovlev.dotaheroes.data.room.heroesDB
+package com.tihonyakovlev.dotaheroes.data.room.heroesDB.entities
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-
-
-@Entity(tableName = "parameters")
-class ParamsEntity(
-    @PrimaryKey
+data class HeroParamsFromDbTupple(
     val id: Int,
-
     val agi_base: Int,
     val agi_gain: Double,
     val armor: Double,
@@ -22,5 +15,5 @@ class ParamsEntity(
     val sight_range_day: Int,
     val sight_range_night: Int,
     val str_base: Int,
-    val thumb_image: String,
+    val thumb_image: String
 )

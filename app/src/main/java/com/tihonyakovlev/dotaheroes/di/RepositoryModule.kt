@@ -1,9 +1,6 @@
 package com.tihonyakovlev.dotaheroes.di
 
-import com.tihonyakovlev.dotaheroes.data.repository.DotaHeroesApi
-import com.tihonyakovlev.dotaheroes.data.repository.DotaRepositoryImpl
-import com.tihonyakovlev.dotaheroes.data.repository.EntityToHeroMapper
-import com.tihonyakovlev.dotaheroes.data.repository.Mapper
+import com.tihonyakovlev.dotaheroes.data.repository.*
 import com.tihonyakovlev.dotaheroes.domain.repository.DotaRepository
 import com.tihonyakovlev.dotaheroes.presentation.viewmodels.DetailsViewModel
 import com.tihonyakovlev.dotaheroes.presentation.viewmodels.MainViewModel
@@ -24,8 +21,10 @@ val repositoryModule = module {
     }
 
     singleOf(::DotaRepositoryImpl){ bind<DotaRepository>() }
-    single { Mapper() }
-    single { EntityToHeroMapper() }
+    single { ApiToEntityHeroesMapper() }
+    single { EntityToApiHeroesMapper() }
+    single { EntityToApiParamsMapper() }
+    single { ApiToEntityParamsMapper() }
 
     viewModel{
         MainViewModel(get())

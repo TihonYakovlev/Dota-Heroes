@@ -1,4 +1,4 @@
-package com.tihonyakovlev.dotaheroes.presentation.screens
+    package com.tihonyakovlev.dotaheroes.presentation.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

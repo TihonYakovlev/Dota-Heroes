@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             DotaHeroesTheme(darkMode) {
-DestinationsNavHost(navGraph = NavGraphs.root)
+                DestinationsNavHost(navGraph = NavGraphs.root)
             }
         }
     }

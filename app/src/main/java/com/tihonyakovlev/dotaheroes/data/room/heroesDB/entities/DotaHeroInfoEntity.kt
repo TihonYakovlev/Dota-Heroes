@@ -1,10 +1,10 @@
-package com.tihonyakovlev.dotaheroes.data.room.heroesDB
+package com.tihonyakovlev.dotaheroes.data.room.heroesDB.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "heroes")
-data class HeroEntity(
+data class DotaHeroInfoEntity(
     @PrimaryKey
     val id: Int,
     val attribute_img: String,
